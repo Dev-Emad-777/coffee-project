@@ -1,0 +1,15 @@
+// custom color variables
+$primary: #6f4e37;
+$secondary: #ecb176;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme:(
+"third": #FFF2D7
+);
+
+$theme-colors: map-merge($custom-theme, $theme-colors);
+
+// import original bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,22 @@
+{
+  "name": "coffee-project",
+  "version": "1.0.0",
+  "description": "coffee website using bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Emad-777/coffee-project.git"
+  },
+  "author": "Dev. Emad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-Emad-777/coffee-project/issues"
+  },
+  "homepage": "https://github.com/Dev-Emad-777/coffee-project#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
