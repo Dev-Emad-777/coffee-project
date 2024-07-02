@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Coffee</title>
+    <link rel="shortcut icon" href="assists/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <script src="script/bootstrap.bundle.min.js" defer></script>
+    <style>
+      section {
+        padding: 60px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container-lg">
+        <!-- navbar-brand -->
+        <a href="#intro" class="navbar-brand">
+          <img src="assists/favicon.svg" alt="Coffee logo" width="40" height="32" />
+        </a>
+        <!-- navbar-toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#items">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar items -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="items">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#intro" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/cards.html" class="nav-link">Cards</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link disabled">About us</a></li>
+            <li class="nav-item"><a href="#buy" class="disabled nav-link">Buy Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- intro text & main image -->
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <h1>
+              <div class="display-2">Coffee</div>
+              <div class="display-5 text-muted">Coffee Shop</div>
+            </h1>
+            <p class="lead my-4 text-muted">
+              Coffee, the world's favorite hot drink, is more than just a morning boost. It's a flavorful, complex brew with a rich history. Intrigued by its journey from bean to global phenomenon, or
+              curious about brewing the perfect cup? Read on!
+            </p>
+            <a href="#more" class="btn btn-secondary btn-lg">Buy Now</a>
+          </div>
+          <div class="col-5 text-center">
+            <img src="assists/cup.jpeg" alt="a cup of coffee" class="img-fluid d-none d-md-block" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
