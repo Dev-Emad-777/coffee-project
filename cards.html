@@ -11,26 +11,7 @@
   </head>
   <body class="bg-third">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md">
-      <div class="container-lg">
-        <!-- navbar-brand -->
-        <a href="./index.html" class="navbar-brand">
-          <img src="assists/favicon.svg" alt="Coffee logo" width="40" height="32" />
-        </a>
-        <!-- navbar-toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#items">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- navbar items -->
-        <div class="collapse navbar-collapse justify-content-end align-center" id="items">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="./cards.html" class="nav-link active">Buy Now</a></li>
-            <li class="nav-item"><a href="./about.html" class="nav-link">About us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar-container"></div>
 
     <!-- pricing -->
     <section>
@@ -75,5 +56,32 @@
         <p class="text-primary text-center"><i class="bi bi-c-circle"></i> Dev. Emad 2024</p>
       </footer>
     </section>
+
+    <!-- load and execute jquery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Load the navbar
+        $("#navbar-container").load("navbar.html", function () {
+          const currentHref = window.location.href;
+          const filename = "./" + currentHref.substring(currentHref.lastIndexOf("/") + 1);
+
+          // Select all anchor tags within the div with id="navbar-container"
+          $("#navbar-container a").each(function () {
+            const href = $(this).attr("href");
+
+            // Check if the href attribute matches the filename
+            if (href === filename) {
+              // Add the "active" class to the matching link
+              $(this).addClass("active");
+
+              // Exit the loop since we only need to activate one link
+              return false;
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

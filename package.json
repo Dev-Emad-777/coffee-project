@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Dev-Emad-777/coffee-project#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
   }
 }
