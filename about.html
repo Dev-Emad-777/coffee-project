@@ -8,61 +8,37 @@
     <script src="script/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="css/custom.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/sticky-footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script/myScript.js" defer></script>
   </head>
   <body class="bg-third">
-    <!-- navbar -->
-    <div id="navbar-container"></div>
+    <!-- header -->
+    <header id="navbar-container"></header>
+    <!-- main -->
+    <main>
+      <div class="container-md d-flex flex-column text-start">
+        <h1 class="text-primary">About</h1>
+        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, cum. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi?</p>
 
-    <div class="container-md d-flex flex-column text-start">
-      <h1 class="text-primary">About</h1>
-      <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, cum. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi?</p>
-
-      <h2 class="text-primary mt-5">Location</h2>
-      <a href="#">
-        <i class="bi bi-geo-alt fs-2 text-primary"></i>
-      </a>
-
-      <h2 class="text-primary mt-5">Contact</h2>
-      <div class="d-flex gap-3">
+        <h2 class="text-primary mt-5">Location</h2>
         <a href="#">
-          <i class="bi bi-instagram text-primary fs-2"></i>
+          <i class="bi bi-geo-alt fs-2 text-primary"></i>
         </a>
-        <a href="#"><i class="bi bi-whatsapp fs-2 text-secondary"></i> </a>
-        <a href="#"><i class="bi bi-youtube fs-2 text-primary"></i></a>
-        <a href="#"><i class="bi bi-twitter fs-2 text-secondary"></i></a>
-        <a href="#"><i class="bi bi-tiktok fs-2 text-primary"></i></a>
+
+        <h2 class="text-primary mt-5">Contact</h2>
+        <div class="d-flex gap-3">
+          <a href="#">
+            <i class="bi bi-instagram text-primary fs-2"></i>
+          </a>
+          <a href="#"><i class="bi bi-whatsapp fs-2 text-secondary"></i> </a>
+          <a href="#"><i class="bi bi-youtube fs-2 text-primary"></i></a>
+          <a href="#"><i class="bi bi-twitter fs-2 text-secondary"></i></a>
+          <a href="#"><i class="bi bi-tiktok fs-2 text-primary"></i></a>
+        </div>
       </div>
-
-      <footer>
-        <p class="text-primary text-center"><i class="bi bi-c-circle"></i> Dev. Emad 2024</p>
-      </footer>
-    </div>
-
-    <!-- load and execute jquery -->
-    <script src="script/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        // Load the navbar
-        $("#navbar-container").load("navbar.html", function () {
-          const currentHref = window.location.href;
-          const filename = "./" + currentHref.substring(currentHref.lastIndexOf("/") + 1);
-
-          // Select all anchor tags within the div with id="navbar-container"
-          $("#navbar-container a").each(function () {
-            const href = $(this).attr("href");
-
-            // Check if the href attribute matches the filename
-            if (href === filename) {
-              // Add the "active" class to the matching link
-              $(this).addClass("active");
-
-              // Exit the loop since we only need to activate one link
-              return false;
-            }
-          });
-        });
-      });
-    </script>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
   </body>
 </html>

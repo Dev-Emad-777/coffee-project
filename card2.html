@@ -8,82 +8,59 @@
     <link rel="stylesheet" href="css/custom.min.css" />
     <script src="script/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/sticky-footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script/myScript.js" defer></script>
   </head>
   <body class="bg-third">
-    <div id="navbar-container"></div>
-
-    <div class="text-center d-flex flex-column justify-content-center align-items-center">
+    <!-- navbar -->
+    <header id="navbar-container"></header>
+    <!-- main -->
+    <main class="container-md text-center d-flex flex-column justify-content-center align-items-center">
       <div>
         <h1 class="text-primary">Instant Coffee</h1>
         <p class="lead text-muted">choose what suit you</p>
       </div>
 
-      <div class="container-md">
-        <div class="row gap-2 justify-content-center align-items-center">
-          <div class="col-8 col-md-3">
-            <div class="card">
-              <img src="assists/instant-2.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Coffee</h5>
-                <p class="card-text"><span class="text-primary fw-bold">300g</span> of MOCCONA instant coffee</p>
-                <p class="card-text display-6 fw-bold my-2 text-primary">$7.99</p>
-                <a href="#" class="btn btn-primary">Buy Now</a>
-              </div>
+      <div class="row gap-2 justify-content-center align-items-center">
+        <div class="col-8 col-md-3">
+          <div class="card">
+            <img src="assists/instant-2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-primary">Coffee</h5>
+              <p class="card-text"><span class="text-primary fw-bold">300g</span> of MOCCONA instant coffee</p>
+              <p class="card-text display-6 fw-bold my-2 text-primary">$7.99</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
             </div>
           </div>
+        </div>
 
-          <div class="col-8 col-md-5">
-            <div class="card">
-              <img src="assists/instant-1.webp" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Gold</h5>
-                <p class="card-subtitle"><span class="text-primary fw-bold">600g</span> of B&B ORIGINAL instant coffee</p>
-                <p class="card-text display-6 fw-bold my-2 text-primary">$14.99</p>
-                <a href="#" class="btn btn-primary">Buy Now</a>
-              </div>
+        <div class="col-8 col-md-5">
+          <div class="card">
+            <img src="assists/instant-1.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-primary">Gold</h5>
+              <p class="card-subtitle"><span class="text-primary fw-bold">600g</span> of B&B ORIGINAL instant coffee</p>
+              <p class="card-text display-6 fw-bold my-2 text-primary">$14.99</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
             </div>
           </div>
+        </div>
 
-          <div class="col-8 col-md-3">
-            <div class="card">
-              <img src="assists/instant-3.webp" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Coffee</h5>
-                <p class="card-subtitle"><span class="text-primary fw-bold">100g</span> of Colombia instant Coffee</p>
-                <p class="card-text display-6 fw-bold my-2 text-primary">$2.99</p>
-                <a href="#" class="btn btn-primary">Buy Now</a>
-              </div>
+        <div class="col-8 col-md-3">
+          <div class="card">
+            <img src="assists/instant-3.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-primary">Coffee</h5>
+              <p class="card-subtitle"><span class="text-primary fw-bold">100g</span> of Colombia instant Coffee</p>
+              <p class="card-text display-6 fw-bold my-2 text-primary">$2.99</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- load and execute jquery -->
-    <script src="script/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        // Load the navbar
-        $("#navbar-container").load("navbar.html", function () {
-          const currentHref = window.location.href;
-          const filename = "./" + currentHref.substring(currentHref.lastIndexOf("/") + 1);
-
-          // Select all anchor tags within the div with id="navbar-container"
-          $("#navbar-container a").each(function () {
-            const href = $(this).attr("href");
-
-            // Check if the href attribute matches the filename
-            if (href === filename) {
-              // Add the "active" class to the matching link
-              $(this).addClass("active");
-
-              // Exit the loop since we only need to activate one link
-              return false;
-            }
-          });
-        });
-      });
-    </script>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
   </body>
 </html>

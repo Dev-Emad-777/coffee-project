@@ -6,82 +6,59 @@
     <title>Buy Coffee</title>
     <link rel="shortcut icon" href="assists/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="stylesheet" href="css/sticky-footer.css" />
     <script src="script/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script/myScript.js" defer></script>
   </head>
   <body class="bg-third">
     <!-- navbar -->
-    <div id="navbar-container"></div>
+    <header id="navbar-container"></header>
 
-    <!-- pricing -->
-    <section>
-      <div class="container-lg">
-        <div class="text-center">
-          <h1 class="text-primary">Coffee</h1>
-          <p class="lead text-muted">choose what suit you</p>
-        </div>
-
-        <div class="row text-center justify-content-center align-items-center">
-          <div class="col-7 col-md-4">
-            <div class="card ">
-              <h3 class="card-header text-primary">Arabica</h3>
-              <img src="assists/arabica-min.jpg" alt="" class="card-img-top" />
-              <div class="card-body">
-                <h3 class="card-title text-primary">Arabica Coffee</h3>
-                <h6 class="card-subtitle">smooth taste with less caffeine</h6>
-                <p class="card-text display-6 fw-bold my-2 text-primary">$4.99</p>
-                <a href="#" class="btn bg-primary fw-bold text-white">Buy Now</a>
-              </div>
-              <div class="card-footer py-1 fw-bold text-secondary">pricing per kilogram</div>
-            </div>
+    <!-- main -->
+    <main class="container-lg">
+      <section>
+        <div>
+          <div class="text-center">
+            <h1 class="text-primary">Coffee</h1>
+            <p class="lead text-muted">choose what suit you</p>
           </div>
 
-          <div class="col-7 col-md-4">
-            <div class="card my-2 ">
-              <h3 class="card-header text-primary">Robusta</h3>
-              <img src="assists/robusta-min.jpg" alt="" class="card-img-top" />
-              <div class="card-body">
-                <h3 class="card-title text-primary">Robusta Coffee</h3>
-                <h6 class="card-subtitle">bitter taste with more caffeine</h6>
-                <p class="card-text display-6 fw-bold my-2 text-primary">$2.99</p>
-                <a href="#" class="btn bg-primary fw-bold text-white">Buy Now</a>
+          <div class="row text-center justify-content-center align-items-center">
+            <div class="col-7 col-md-4">
+              <div class="card">
+                <h3 class="card-header text-primary">Arabica</h3>
+                <img src="assists/arabica-min.jpg" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h3 class="card-title text-primary">Arabica Coffee</h3>
+                  <h6 class="card-subtitle">smooth taste with less caffeine</h6>
+                  <p class="card-text display-6 fw-bold my-2 text-primary">$4.99</p>
+                  <a href="#" class="btn bg-primary fw-bold text-white">Buy Now</a>
+                </div>
+                <div class="card-footer py-1 fw-bold text-secondary">pricing per kilogram</div>
               </div>
-              <div class="card-footer py-1 fw-bold text-secondary">pricing per kilogram</div>
+            </div>
+
+            <div class="col-7 col-md-4">
+              <div class="card my-2">
+                <h3 class="card-header text-primary">Robusta</h3>
+                <img src="assists/robusta-min.jpg" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h3 class="card-title text-primary">Robusta Coffee</h3>
+                  <h6 class="card-subtitle">bitter taste with more caffeine</h6>
+                  <p class="card-text display-6 fw-bold my-2 text-primary">$2.99</p>
+                  <a href="#" class="btn bg-primary fw-bold text-white">Buy Now</a>
+                </div>
+                <div class="card-footer py-1 fw-bold text-secondary">pricing per kilogram</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+    </main>
 
-      <footer class="my-1">
-        <p class="text-primary text-center"><i class="bi bi-c-circle"></i> Dev. Emad 2024</p>
-      </footer>
-    </section>
-
-    <!-- load and execute jquery -->
-    <script src="script/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        // Load the navbar
-        $("#navbar-container").load("navbar.html", function () {
-          const currentHref = window.location.href;
-          const filename = "./" + currentHref.substring(currentHref.lastIndexOf("/") + 1);
-
-          // Select all anchor tags within the div with id="navbar-container"
-          $("#navbar-container a").each(function () {
-            const href = $(this).attr("href");
-
-            // Check if the href attribute matches the filename
-            if (href === filename) {
-              // Add the "active" class to the matching link
-              $(this).addClass("active");
-
-              // Exit the loop since we only need to activate one link
-              return false;
-            }
-          });
-        });
-      });
-    </script>
+    <!-- footer -->
+    <footer id="footer"></footer>
   </body>
 </html>

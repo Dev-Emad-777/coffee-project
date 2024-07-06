@@ -9,14 +9,16 @@
     <script src="script/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="css/sticky-footer.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script/myScript.js" defer></script>
   </head>
   <body class="bg-third">
-    <!-- navbar -->
-    <div id="navbar-container"></div>
+    <!-- header -->
+    <header id="navbar-container"></header>
 
     <!-- intro text & main image -->
-    <section id="intro">
-      <div class="container-md">
+    <main class="container-md">
+      <section id="intro">
         <div class="d-flex flex-column justify-content-center align-items-center">
           <h1 class="display-1 text-primary">Coffee</h1>
           <h2 class="display-5 text-muted">Coffee Shop</h2>
@@ -35,37 +37,10 @@
         <div class="d-flex justify-content-center d-md-block">
           <a href="./cards.html" class="btn btn-primary fw-bold btn-lg">Buy Now</a>
         </div>
-      </div>
-    </section>
-    <footer class="footer bg-third">
-      <p class="text-primary text-center"><i class="bi bi-c-circle"></i> Dev. Emad 2024</p>
-    </footer>
+      </section>
+    </main>
 
-    <!-- load and execute jquery -->
-    <script src="script/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        // Load the navbar
-        $("#navbar-container").load("navbar.html", function () {
-          const currentHref = window.location.href;
-          const filename = "./" + currentHref.substring(currentHref.lastIndexOf("/") + 1);
-
-          // Select all anchor tags within the div with id="navbar-container"
-          $("#navbar-container a").each(function () {
-            const href = $(this).attr("href");
-
-            // Check if the href attribute matches the filename
-            if (href === filename) {
-              // Add the "active" class to the matching link
-              $(this).addClass("active");
-
-              // Exit the loop since we only need to activate one link
-              return false;
-            }
-          });
-        });
-      });
-    </script>
+    <!-- footer -->
+    <footer id="footer"></footer>
   </body>
 </html>
