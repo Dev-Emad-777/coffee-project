@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Coffee</title>
+    <link rel="shortcut icon" href="assists/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <script src="script/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/sticky-footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script/myScript.js" defer></script>
+  </head>
+  <body class="bg-third">
+    <!-- navbar -->
+    <header id="navbar-container"></header>
+    <!-- main -->
+    <main class="container-md text-center d-flex flex-column justify-content-center align-items-center">
+      <div>
+        <h1 class="text-primary">Instant Coffee</h1>
+        <p class="lead text-muted">choose what suit you</p>
+      </div>
+
+      <div class="row gap-2 justify-content-center align-items-center">
+        <!-- first card -->
+        <div class="col-8 col-md-3">
+          <div class="card">
+            <img src="assists/instant-2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-primary">Coffee</h5>
+              <p class="card-text"><span class="text-primary fw-bold">300g</span> of MOCCONA instant coffee</p>
+              <p class="card-text display-6 fw-bold my-2 text-primary">$<span class="price">7.99</span></p>
+              <div class="d-flex justify-content-center align-items-center">
+                <button class="minus btn btn-sm border border-2 border-primary"><span class="bi bi-dash-lg text-primary"></span></button>
+                <input type="number" name="" id="" class="w-25 rounded-pill text-center" value="0" />
+                <button class="plus btn btn-sm border border-2 border-primary"><span class="bi bi-plus-lg text-primary"></span></button>
+              </div>
+              <p class="card-text display-6 fw-bold my-2 text-primary">Total $<span class="total">77</span></p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      $(document).ready(function () {
+        $(".minus").on("click", function () {
+          var nextInput = $(this).next("input"); // Find the next input element
+          if (nextInput.length) {
+            // Check if a next input exists
+            var currentValue = parseInt(nextInput.val(), 10); // Parse current value to integer
+
+            if (!isNaN(currentValue) && currentValue > 0) {
+              // Validate number and prevent negative values
+              nextInput.val(currentValue - 1); // Decrease the value
+            }
+          } else {
+            console.log("No next input found"); // Optional: Log a message if no next input exists
+          }
+        });
+
+        $(".plus").on("click", function () {
+          var prevInput = $(this).prev("input");
+
+          var totalElement = $(this).first().next(".total");
+
+          if (prevInput.length) {
+            var currentValue = parseInt(prevInput.val(), 10);
+
+            if (!isNaN(currentValue)) {
+              prevInput.val(currentValue + 1);
+            }
+          } else {
+            console.log("No previous input found");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
