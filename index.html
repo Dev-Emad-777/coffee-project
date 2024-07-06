@@ -15,23 +15,30 @@
 
     <!-- intro text & main image -->
     <section id="intro">
-      <div class="container-lg d-flex flex-column align-items-center gap-2">
-        <h1>
+      <div class="container-md">
+        <div class="d-flex flex-column justify-content-center align-items-center">
           <h1 class="display-1 text-primary">Coffee</h1>
           <h2 class="display-5 text-muted">Coffee Shop</h2>
-        </h1>
-        <p class="lead my-4 text-muted">
-          Coffee, the world's favorite hot drink, is more than just a morning boost. It's a flavorful, complex brew with a rich history. Intrigued by its journey from bean to global phenomenon, or
-          curious about brewing the perfect cup? Read on!
-        </p>
-        <img src="assists/cup-min.jpeg" alt="a cup of coffee" class="img-thumbnail border-primary border-3" width="480px" />
-
-        <a href="./cards.html" class="btn btn-primary fw-bold btn-lg">Buy Now</a>
-        <footer>
-          <p class="text-primary text-center"><i class="bi bi-c-circle"></i> Dev. Emad 2024</p>
-        </footer>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-7 me-auto">
+            <p class="lead text-muted">
+              Coffee, the world's favorite hot drink, is more than just a morning boost. It's a flavorful, complex brew with a rich history. Intrigued by its journey from bean to global phenomenon, or
+              curious about brewing the perfect cup? Read on!
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img src="assists/cup-min.jpeg" alt="a cup of coffee" class="img-thumbnail border-primary border-3 rounded mx-auto d-block" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center d-md-block">
+          <a href="./cards.html" class="btn btn-primary fw-bold btn-lg">Buy Now</a>
+        </div>
       </div>
     </section>
+    <footer>
+      <p class="text-primary text-center"><i class="bi bi-c-circle"></i> Dev. Emad 2024</p>
+    </footer>
 
     <!-- load and execute jquery -->
     <script src="script/jquery.min.js"></script>
