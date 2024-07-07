@@ -23,3 +23,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("#footer").load("footer.html");
 });
+
+$(document).ready(function () {
+  $(".counter").load("counter.html");
+});
